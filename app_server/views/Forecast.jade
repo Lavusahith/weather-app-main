@@ -1,0 +1,73 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Forecast page
+    link(rel="icon", type="image/png", href='/images/android-chrome-192x192.png')
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", rel="stylesheet")
+    style.
+      /* Custom styles */
+      body {
+        background-color: rgb(52, 175, 192);
+        font-family: 'Raleway', sans-serif;
+        color: #f2f2f2; /* Light text color */
+      }
+      .navbar-custom {
+        background-color: #344ec0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .navbar-custom .navbar-brand {
+        color: #ffffff;
+        font-size: 24px;
+        font-family: 'Pacifico', cursive;
+      }
+      .navbar-custom .nav-link {
+        color: #ffffff;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+      .navbar-custom .nav-link:hover {
+        color: #344ec0; 
+      }
+  body
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+      .container
+        a.navbar-brand(href='#') Weather Blog
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarNav.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item.active
+            li.nav-item
+              a.nav-link(href='/') Home
+            li.nav-item 
+              a.nav-link(href='/') Forecast
+            li.nav-item
+              a.nav-link(href='/Articles') Articles
+            li.nav-item
+              a.nav-link(href='/AboutUs') AboutUs
+            li.nav-item
+              a.nav-link(href='/contact') Contact
+          .search-box.navbar-nav
+            form.form-inline.my-2.my-lg-0
+              input.form-control(type='text', placeholder='Search')
+              button.btn.btn-outline-light(type='submit')
+                i.fa.fa-search
+
+    main.container.content
+      .jumbotron.jumbotron-fluid.bg-primary.text-white.py-0
+        .container.text-center
+          h1.display-4 FORECAST PAGE
+    header
+    h1 Forecast Page
+    .container
+      .forecast
+        p Welcome to our Weather Forecast page! Stay prepared with our accurate and reliable weather predictions for your region and beyond. Our team of meteorologists and data analysts work around the clock to provide you with up-to-date forecasts, ensuring you have the information you need to plan your day.
+        p Whether you're interested in the day's temperature, precipitation chances, or wind conditions, we've got you covered. Our user-friendly interface makes it easy to access the information you're looking for. From local forecasts to international weather trends, our goal is to keep you informed and help you make informed decisions based on weather conditions.
+      .forecast
+      h2 Next Week's Forecast
+      p We understand the importance of accurate weather information for outdoor activities, travel plans, and safety precautions. Our commitment is to deliver forecasts that you can rely on, so you can go about your day with confidence. No matter the season, our comprehensive weather data will help you stay ahead of changing conditions and adapt your plans accordingly.
+      p Feel free to explore our interactive maps, hourly and daily forecasts, and additional weather resources. We're here to provide you with the insights you need to stay comfortable and well-prepared in any weather.If you have any questions or require assistance, please don't hesitate to contact our dedicated support team. Your satisfaction is our priority as we continue to be your trusted source for weather forecasts. 
+    footer
+

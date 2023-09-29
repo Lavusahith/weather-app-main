@@ -1,0 +1,74 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title About page
+    link(rel="icon", type="image/png", href='/images/android-chrome-192x192.png')
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", rel="stylesheet")
+    style.
+      /* Custom styles */
+      body {
+        background-color: rgb(52, 175, 192);
+        font-family: 'Raleway', sans-serif;
+        color: #f2f2f2; /* Light text color */
+      }
+      .navbar-custom {
+        background-color: #344ec0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .navbar-custom .navbar-brand {
+        color: #ffffff;
+        font-size: 24px;
+        font-family: 'Pacifico', cursive;
+      }
+      .navbar-custom .nav-link {
+        color: #ffffff;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+      .navbar-custom .nav-link:hover {
+        color: #344ec0; 
+      }
+  body
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+      .container
+        .navbar-brand
+          a.logo(href='#') Weather Blog
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        .collapse.navbar-collapse#navbarNav
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href='/') Home
+            li.nav-item
+              a.nav-link(href='/Forecast') Forecast
+            li.nav-item 
+              a.nav-link(href='/Articles') Articles
+            li.nav-item
+              a.nav-link(href='/AboutUs') AboutUs
+            li.nav-item
+              a.nav-link(href='/contact') Contact
+          .search-box.navbar-nav
+            form.form-inline.my-2.my-lg-0
+              input.form-control(type='text', placeholder='Search')
+              button.btn.btn-outline-light(type='submit')
+                i.fa.fa-search
+
+    main.container.content
+      .jumbotron.jumbotron-fluid.bg-primary.text-white.py-0
+        .container.text-center
+          h1.display-4 ABOUT PAGE
+     header
+      h1 About Us
+      container
+       .article
+        p Welcome to Weather Blog! We are a passionate team of weather enthusiasts who are dedicated to providing you with accurate and up-to-date weather information from around the world.
+        h2 Another Title
+        p Our mission is to make weather data accessible to everyone in a user-friendly and informative way.
+        p Whether you're planning a vacation, a weekend getaway, or simply curious about the weather in your area, we've got you covered
+      .article
+        h2 Another Title
+        p Education has been significantly transformed by technology. Online learning platforms provide access to knowledge for individuals around the world, breaking down geographical barriers to education. Nevertheless, the digital divide remains a significant hurdle, with some still lacking access to the resources necessary for learning in a digital age.
+        p While technology has brought about positive changes, it has also presented challenges. Cybersecurity threats, online misinformation, and the impact of automation on jobs are topics that demand attention. As we navigate this ever-changing landscape, it's crucial to strike a balance between harnessing the benefits of technology and addressing its potential drawbacks.
+    footer
