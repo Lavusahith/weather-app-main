@@ -3,7 +3,7 @@ require('dotenv').config();
 const PORT = process.env.PORT || 3000;
 
 var gracefulshutdown;
-let dbURI="mongodb://0.0.0.0:27017/weatherapp";
+let dbURI="mongodb://0.0.0.0:27017/weatherforecast";
 if (process.env.NODE_ENV === 'production') {
   dbURI = process.env.MONGODB_URI;
 }

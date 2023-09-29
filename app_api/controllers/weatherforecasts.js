@@ -1,7 +1,7 @@
-const mongoose = require('mongoose');
-const weatherforecast = mongoose.model('weatherforecasts');
+var mongoose = require('mongoose');
+var weatherforecast = mongoose.model('weatherforecasts');
 
-const sendJsonResponse = function (res, status, content) {
+var sendJsonResponse = function (res, status, content) {
   res.status(status);
   res.json(content);
 };
@@ -17,9 +17,9 @@ module.exports.weatherforecastsList = async function (req, res) {
 
 module.exports.weatherforecastsReadOne = async function (req, res) {
   try {
-    const forecast = await weatherforecast.findById(req.params.forecastid).exec();
+    const forecast = await weatherforecast.findById(req.params.locationid).exec();
     if (!forecast) {
-      sendJsonResponse(res, 404, { error: 'Weather forecast not found' });
+      sendJsonResponse(res, 404, { error: 'weather forecast not found' });
     } else {
       sendJsonResponse(res, 200, forecast);
     }
