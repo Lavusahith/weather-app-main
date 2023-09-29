@@ -6,7 +6,6 @@ var sendJsonResponse = function (res, status, content) {
   res.json(content);
 };
 
-// Controller methods for WeatherForecast
 module.exports.weatherforecastsCreate = function (req, res) {
   sendJsonResponse(res, 200, { "status": "success" });
 };
@@ -17,17 +16,13 @@ module.exports.weatherforecastsList = async function (req, res) {
 
 module.exports.weatherforecastsReadOne = async function (req, res) {
   try {
-    const forecast = await weatherforecast.findById(req.params.locationid).exec();
-    if (!forecast) {
-      sendJsonResponse(res, 404, { error: 'weather forecast not found' });
-    } else {
-      sendJsonResponse(res, 200, forecast);
-    }
-  } catch (err) {
+    const forecasts = await weatherforecast.findById(req.params.forecastid).exec();
+    sendJsonResponse(res, 200, forecasts);
+} catch (err) {
     console.log(err);
     sendJsonResponse(res, 500, { error: 'An error occurred' });
-  }
-  };
+}
+};
 
 module.exports.weatherforecastsUpdateOne = function (req, res) {
   
